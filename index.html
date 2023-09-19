@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="Description" content="Put your description here." />
+    <base href="/" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="stylesheet" href="./src/style.css" />
+    <!-- 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@lion/tabs@1.11.2/lion-tabs/lion-tabs.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@lion/tabs@1.11.2/lion-tabs/lion-tabs.js"></script> -->
+
+    <!-- <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #ededed;
+    }
+  </style> -->
+    <title>my-webseries</title>
+  </head>
+
+  <body>
+    <header class="app-name">My Web Series</header>
+
+    <my-webseries></my-webseries>
+
+    <script type="module" src="src/my-webseries.js"></script>
+    <script type="module" src="demo/web-series-form.js"></script>
+    <script type="module" src="demo/web-series-card.js"></script>
+
+    <div class="container">
+      <web-series-form></web-series-form>
+      <web-series-card></web-series-card>
+    </div>
+
+    <!-- <tab-container></tab-container> -->
+  </body>
+</html>
