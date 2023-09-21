@@ -8,6 +8,7 @@ import '@lion/ui/define/lion-input-amount.js';
 // import CapitalizeFirstLetterValidator from './CapitalizeFirstLetterValidator';
 import { loadDefaultFeedbackMessages } from '@lion/ui/validate-messages.js';
 import { Required, IsNumber, MinMaxNumber } from '@lion/ui/form-core.js';
+import { localize } from '@lion/ui/localize.js';
 
 class WebSeriesForm extends LitElement {
   static get styles() {

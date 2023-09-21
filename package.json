@@ -26,7 +26,7 @@
     "@lion/input": "^0.18.0",
     "@lion/select": "^0.17.1",
     "@lion/tabs": "^0.13.1",
-    "@lion/ui": "^0.4.0",
+    "@lion/ui": "^0.4.1",
     "@lion/validate": "^0.11.0",
     "lit": "^2.8.0"
   },
