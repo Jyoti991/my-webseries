@@ -1,5 +1,6 @@
 import { html, css, LitElement } from 'lit';
 import '@lion/ui/define/lion-tabs.js';
+import { ajax } from '@lion/ajax';
 
 class WebSeriesCard extends LitElement {
   static get properties() {
@@ -12,44 +13,17 @@ class WebSeriesCard extends LitElement {
     super();
 
     this.attachShadow({ mode: 'open' });
-    this.cards = [
-      {
-        title: 'Gilmore Girls',
-        directors: 'Amy Sherman-Palladino',
-        stars: '8.2',
-        platform: 'Netflix',
-      },
-      {
-        title: 'Demon Slayer',
-        directors: 'Haruo Sotozaki',
-        stars: '8.7',
-        platform: 'Netflix',
-      },
-      {
-        title: 'Squid Game',
-        directors: 'Hwang Dong-hyuk',
-        stars: '8.0',
-        platform: 'Netflix',
-      },
-      {
-        title: 'FRIENDS',
-        directors: 'David Crane & Marta Kauffman',
-        stars: '8.9',
-        platform: 'Netflix',
-      },
-      {
-        title: 'Doraemon',
-        directors: 'Mitsuo Kaminashi',
-        stars: '8.3',
-        platform: 'Hotstar',
-      },
-      {
-        title: 'Farzi',
-        directors: 'Raj & DK',
-        stars: '8.4',
-        platform: 'Prime-Video',
-      },
-    ];
+    this.cards = [];
+    this.fetchHandler();
+  }
+
+  fetchHandler() {
+    ajax
+      .fetch(`../cards.json`)
+      .then(response => response.json())
+      .then(result => {
+        this.cards = [...this.cards, ...result.cards];
+      });
   }
 
   static get styles() {
